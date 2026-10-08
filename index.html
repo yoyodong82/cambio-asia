@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#103c3b">
+  <meta name="description" content="Le valute del tuo viaggio, in euro. Anche offline.">
+  <title>Cambio Asia</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header><span class="eyebrow">IL TUO VIAGGIO, IN EURO</span><h1>Cambio Asia <span aria-hidden="true">↗</span></h1><p>Un prezzo locale. Un valore familiare.</p></header>
+    <section class="card" aria-label="Convertitore">
+      <label for="currency">Dove sei?</label>
+      <select id="currency">
+        <option value="QAR">Qatar · QAR</option>
+        <option value="KRW" selected>Corea del Sud · KRW</option>
+        <option value="JPY">Giappone · JPY</option>
+        <option value="CNY">Cina · CNY</option>
+        <option value="HKD">Hong Kong · HKD</option>
+        <option value="MOP">Macao · MOP</option>
+        <option value="SGD">Singapore · SGD</option>
+      </select>
+      <label for="amount">Importo in <span id="code">KRW</span></label>
+      <div class="amount-row"><input id="amount" type="text" inputmode="decimal" autocomplete="off" placeholder="0" maxlength="24" aria-describedby="input-help"><button id="clear" type="button" aria-label="Cancella importo">×</button></div>
+      <small id="input-help">Decimali con virgola o punto, senza separatori delle migliaia.</small>
+      <div class="result" aria-live="polite" aria-atomic="true"><span>In euro</span><output id="result">—</output><small id="result-help">Inserisci un importo.</small></div>
+      <div class="rate-details"><p id="rate">Cambio in caricamento…</p><p id="updated">Ultimo aggiornamento: —</p></div>
+      <p id="status" role="status">Preparazione per l’uso offline…</p>
+    </section>
+    <button id="install" type="button" hidden>Installa Cambio Asia</button>
+    <p class="hint">Il cambio si aggiorna automaticamente al massimo ogni 24 ore. Dopo il primo caricamento online puoi usare l’app anche senza connessione.</p>
+    <footer><p>Nessuna pubblicità. Nessuna cronologia.<br>Ricordiamo solo la valuta e i dati del cambio.</p><p>Cambi indicativi: commissioni di carte e banche escluse.</p><a href="https://www.exchangerate-api.com" target="_blank" rel="noopener noreferrer">Rates By Exchange Rate API</a></footer>
+  </main>
+</body>
+</html>
